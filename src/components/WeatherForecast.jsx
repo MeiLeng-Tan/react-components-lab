@@ -3,20 +3,21 @@ import "./WeatherForecast.css";
 const WeatherForecast = (props) => {
   return (
     <>
-      {props.weatherForecast.map((forecast) => (
-        <div className="weather">
-          <h2>{forecast.day}</h2>
-          <img src={forecast.img} alt={forecast.imgAlt} />
-          <p>
-            <span>Conditions: </span>
-            {forecast.conditions}
-          </p>
-          <p>
-            <span>Time: </span>
-            {forecast.time}
-          </p>
-        </div>
-      ))}
+      <div className="weather">
+        <h2>{props.weatherForecast.day}</h2>
+        <img
+          src={props.weatherForecast.img}
+          alt={props.weatherForecast.imgAlt}
+        />
+        <p>
+          <span>Conditions: </span>
+          {props.weatherForecast.conditions}
+        </p>
+        <p>
+          <span>Time: </span>
+          {props.weatherForecast.time}
+        </p>
+      </div>
     </>
   );
 };
